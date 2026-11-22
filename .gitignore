@@ -1,0 +1,8 @@
+*.com
+*.bin
+*.ovr
+*.z80
+*.lst
+*.bak
+.tnylpo.log
+.DS_Store
