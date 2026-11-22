@@ -1,4 +1,4 @@
-# microedit80 (`pano` & `mcp`)
+# Ppano(&mcp)
 
 A minimal, nano-inspired full-screen text editor (`pano`) for Agon and CP/M-80, paired with an Agon `$B0000` MOSlet launcher (`mcp`) that turns `pano` into an edit-assemble-run loop around `ez80asm`. Written in the Turbo Pascal 3.0 dialect for [PASTA/80](https://github.com/pleumann/pasta80).
 
