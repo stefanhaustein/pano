@@ -359,9 +359,11 @@ begin
     end;
   end;
   if DotPos > 0 then
-    MakeOutBin := Copy(Name, 1, DotPos - 1) + '.bin'
+    MakeOutBin := Copy(Name, 1, DotPos - 1) +
+      {$ifdef SYS_AGON} '.bin' {$else} '.com' {$endif}
   else
-    MakeOutBin := Name + '.bin';
+    MakeOutBin := Name +
+      {$ifdef SYS_AGON} '.bin' {$else} '.com' {$endif};
 end;
 
 procedure DoIdeAction(Act: Char);

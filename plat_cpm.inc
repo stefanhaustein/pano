@@ -2,7 +2,7 @@
 
 const
   ErrFileNotFound = 255;
-  HasIdeRunner    = False;
+  HasIdeRunner    = True;
 
 function ReadKeyEvent(var Ch: Char): Integer;
 var
@@ -57,5 +57,10 @@ begin
     Exit;
   end;
 
-  ReadKeyEvent := DecodeCommonKey(Ch);
+  if Ch = #2 then
+    ReadKeyEvent := evCompile
+  else if Ch = #18 then
+    ReadKeyEvent := evRun
+  else
+    ReadKeyEvent := DecodeCommonKey(Ch);
 end;
